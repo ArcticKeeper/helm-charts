@@ -38,7 +38,7 @@ spec:
               kubectl delete vmsingles --all --ignore-not-found=true;
               kubectl delete vmalertmanagers --all --ignore-not-found=true;
               kubectl delete vmclusters --all --ignore-not-found=true;
-              /quitquitquit;
+              x=$?; wget -q --post-data='' -S -O /dev/null http://127.0.0.1:15020/quitquitquit && exit $x
       restartPolicy: OnFailure
     {{- with .Values.nodeSelector }}
       nodeSelector:
