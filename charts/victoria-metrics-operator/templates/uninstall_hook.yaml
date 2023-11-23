@@ -38,6 +38,7 @@ spec:
               kubectl delete vmsingles --all --ignore-not-found=true;
               kubectl delete vmalertmanagers --all --ignore-not-found=true;
               kubectl delete vmclusters --all --ignore-not-found=true;
+              /quitquitquit;
       restartPolicy: OnFailure
     {{- with .Values.nodeSelector }}
       nodeSelector:
